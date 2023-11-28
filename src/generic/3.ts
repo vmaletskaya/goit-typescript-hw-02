@@ -4,9 +4,9 @@
 */
 
 
-function merge<T extends Record<string, any>, U extends Record<string, any>>(objA: T, objB: U): T & U {
+
+function merge<T extends object>(objA: T, objB: T): T {
   return { ...objA, ...objB };
 }
 
-
-export {}
+export {};
